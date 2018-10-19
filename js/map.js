@@ -1,26 +1,9 @@
-$(document).ready(function () {
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
 
-		//Open street  Map
-		var coord = [40.738270, -74.008911]; // <--- coordinates here
+var map=new google.maps.Map(document.getElementById("map-canvas"),mapProp);
 
-		var map = L.map('map-canvas', { scrollWheelZoom:false}).setView(coord, 19);
-
-		L.tileLayer('../../../%7bs%7d.tile.openstreetmap.org/%7bz%7d/%7bx%7d/%7by%7d.png', {
-		maxZoom: 22,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-		}).addTo(map);
-
-		L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-		attribution: ''
-		}).addTo(map);
-
-		// custom icon
-		var customIcon = L.icon({
-		iconUrl: 'img/mapmarker.png',
-		iconSize:     [64, 64], // size of the icon
-		iconAnchor:   [32, 63] // point of the icon which will correspond to marker's location
-		});
-
-		// marker object, pass custom icon as option, add to map         
-		var marker = L.marker(coord, {icon: customIcon}).addTo(map);
-});
+}
