@@ -143,6 +143,8 @@
   <source src="music/DCinnamons-Ku-Yakin-Cinta-Official-Video_-PC_VtV0I0k.mp3" type="audio/mpeg">
 </audio>
 
+<button class="playSound">Play</button>
+
          </div>
          <!-- /col-md-6-->
       </section>
@@ -881,9 +883,23 @@
       <script src="switcher/js/dmss.js"></script>	
 
       <script type="text/javascript">
-         
-            const rollSound = new Audio("music/DCinnamons-Ku-Yakin-Cinta-Official-Video_-PC_VtV0I0k.mp3");
-            rollSound.play();
+         var obj = document.createElement("audio");
+              obj.src = "music/DCinnamons-Ku-Yakin-Cinta-Official-Video_-PC_VtV0I0k.mp3";
+              obj.volume = 0.3;
+              obj.autoPlay = false;
+              obj.preLoad = true;
+              obj.controls = true;
+
+              $(".playSound").click(function() {
+                obj.play();
+                // obj.pause();
+              });
+           
+
+            $(document).ready(function() {
+               $( ".playSound" ).trigger( "click" );
+            });
+            
       </script>
    </body>
 
