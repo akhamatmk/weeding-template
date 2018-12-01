@@ -783,10 +783,9 @@ ul.polaroids li {
 /* =========================== Quote ============================ */
 
 #quote {
-    background: url(../img/bgcall.jpg) no-repeat;
+    background: url(../img/IMG-20181201-WA0013.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
 }
 #quote blockquote h2 {
     font-size: 30px!important;
