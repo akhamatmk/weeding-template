@@ -15,5 +15,9 @@ var marker = new google.maps.Marker({
 // To add the marker to the map, call setMap();
 marker.setMap(map);
 
+google.maps.event.addListener(marker, 'click', function() {
+    window.location.href = "https://goo.gl/maps/8p17hhqzEtx";
+});
+
 }
 

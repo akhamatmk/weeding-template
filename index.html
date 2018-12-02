@@ -210,11 +210,8 @@
                </p>
                <!-- small social-icons -->	
                <div class="social-media smaller">
-                  <a href="#" title=""><i class="fa fa-twitter"></i></a>
-                  <a href="#" title=""><i class="fa fa-facebook"></i></a>
-                  <a href="#" title=""><i class="fa fa-linkedin"></i></a>
-                  <a href="#" title=""><i class="fa fa-pinterest"></i></a>
-                  <a href="#" title=""><i class="fa fa-instagram"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/widea.gelis" title=""><i class="fa fa-facebook"></i></a>
+                  <a target="_blank" href="https://www.instagram.com/widia.1305/" title=""><i class="fa fa-instagram"></i></a>
                </div>
                <!-- /social-icons -->
             </div>
@@ -631,38 +628,7 @@
          <!-- /col-md-7-->
       </section>
       <!-- /section ends -->
-      <!-- Section: Registry -->
-      <section id="registry">
-         <div class="section-heading text-center">
-            <h2>Registry</h2>
-            <!-- divider -->
-            <div class="hr"></div>
-         </div>
-         <!--/section-heading -->
-         <div class="container text-center">
-            <div class="row">
-               <!-- Brand 1 -->
-               <div class="col-sm-6 col-md-3">
-                  <a href="#"><img src="img/brand1.png" alt="" class="brand col-centered img-responsive"/></a>
-               </div>
-               <!-- Brand 2 -->
-               <div class="col-sm-6 col-md-3 res-margin">
-                  <a href="#"><img src="img/brand2.png" alt="" class="brand col-centered img-responsive"/></a>
-               </div>
-               <!-- Brand 3 -->
-               <div class="col-sm-6 col-md-3 res-margin">
-                  <a href="#"><img src="img/brand3.png" alt="" class="brand col-centered img-responsive"/></a>
-               </div>
-               <!-- Brand 4 -->
-               <div class="col-sm-6 col-md-3 res-margin">
-                  <a href="#"><img src="img/brand4.png" alt="" class="brand col-centered img-responsive"/></a>
-               </div>
-            </div>
-            <!-- /row -->		  
-         </div>
-         <!-- /container -->
-      </section>
-      <!-- Section ends --> 
+      
       <!-- Section: Gallery -->
       <section id="gallery" class="watercolor">
          <div class="section-heading text-center">
@@ -886,7 +852,9 @@
 
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnsrr4j7KEgyMbE9Nc0AE2L2cwYyK9Cio&callback=myMap"></script>
       <!-- All Scripts & Plugins -->
-      <script src="switcher/js/dmss.js"></script>	
+      <script src="switcher/js/dmss.js"></script>
+
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
       <script type="text/javascript">
          var obj = document.createElement("audio");
@@ -905,7 +873,10 @@
             $(document).ready(function() {
                $( ".playSound" ).trigger( "click" );
             });
-            
+       
+         $("#submit_rsvp").click(function(){
+            swal("Thank you :)", " ", "success");
+         });     
       </script>
    </body>
 
